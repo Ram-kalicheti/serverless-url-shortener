@@ -48,7 +48,9 @@ def shorten_url(req: func.HttpRequest) -> func.HttpResponse:
     )
 
 @app.route(route="{short_code}", methods=["GET"])
-def redirect_url(req: func.HttpRequest, short_code: str) -> func.HttpResponse:
+def redirect_url(req: func.HttpRequest) -> func.HttpResponse:
+    short_code = req.route_params.get("short_code")
+
     try:
         item = container.read_item(item=short_code, partition_key=short_code)
         return func.HttpResponse(
