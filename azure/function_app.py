@@ -2,12 +2,13 @@ import azure.functions as func
 import json
 import random
 import string
+import os
 from azure.cosmos import CosmosClient
 
 app = func.FunctionApp()
 
-COSMOS_URL = "your-cosmos-url"
-COSMOS_KEY = "your-cosmos-key"
+COSMOS_URL = os.environ["COSMOS_URL"]
+COSMOS_KEY = os.environ["COSMOS_KEY"]
 DATABASE = "url-shortener"
 CONTAINER = "urls"
 
@@ -41,7 +42,7 @@ def shorten_url(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse(
         json.dumps({
             "short_code": short_code,
-            "short_url": f"https://your-function-url/api/{short_code}"
+            "short_url": f"https://urlshortenerfn-f5cdbgc6bbcwc0bd.westus2-01.azurewebsites.net/api/{short_code}"
         }),
         status_code=200
     )
