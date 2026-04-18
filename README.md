@@ -13,6 +13,8 @@ GET /{short_code}  →  301 redirect to original URL
 
 ## Architecture
 
+![Architecture](docs/architecture_diagram.png)
+
 ### AWS
 ```
 Client → API Gateway → Lambda → DynamoDB
