@@ -83,6 +83,8 @@ curl -X POST "https://urlshortenerfn-f5cdbgc6bbcwc0bd.westus2-01.azurewebsites.n
 | API routes | ![API Gateway](docs/screenshots/aws/api-gateway-routes_get.png) | — |
 | Shorten test | ![Shorten](docs/screenshots/aws/aws-shorten-test.png) | ![Shorten](docs/screenshots/azure/azure-shorten-test.png) |
 | Redirect test | ![Redirect](docs/screenshots/aws/aws-redirect-test.png) | ![Redirect](docs/screenshots/azure/azure-redirect-test.png) |
+| Postman shorten | ![Shorten](docs/screenshots/aws/aws-postman-shorten.png) | ![Shorten](docs/screenshots/azure/azure-postman-shorten.png) |
+| Postman redirect | ![Redirect](docs/screenshots/aws/aws-postman-redirect.png) | ![Redirect](docs/screenshots/azure/azure-postman-redirect.png) |
 
 ## Cost
 
